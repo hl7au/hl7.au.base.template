@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ProcessIg-HL7">
+  <import file="ant.xml"/>
+  <target name="onGenerate.jira.setup" depends="onGenerate.processIg">
+    <property name="file.properties" value="${ig.template}/properties.txt"/>
+    <property name="file.workgroups" value="${ig.root}/input-cache/workgroups.xml"/>
+    <property name="file.jiraspec" value="${ig.root}/input-cache/jiraspec.xml"/>
+    <property name="file.packagelist" value="${ig.root}/package-list.json"/>
+    <xslt in="${onGenerate.ig.dest}xml" out="${file.properties}" style="${ig.scripts}/onGenerate.genProperties.xslt"/>
+    <loadproperties srcfile="${file.properties}"/>
+    <get src="https://github.com/HL7/JIRA-Spec-Artifacts/raw/master/xml/_workgroups.xml" dest="${file.workgroups}" usetimestamp="true" ignoreerrors="true"/>
+    <get src="https://github.com/HL7/JIRA-Spec-Artifacts/raw/master/xml/${jiraSpecFile}.xml" dest="${file.jiraspec}" usetimestamp="true" ignoreerrors="true"/>
+    <condition property="doJira">
+      <and>
+        <available file="${file.workgroups}"/>
+        <available file="${file.packagelist}"/>
+      </and>
+    </condition>
+  </target>
+  <target name="onGenerate.jira.check" depends="onGenerate.jira.generate" unless="jiraMatch">
+    <copy file="${file.jira}" tofile="${ig.root}/${jiraSpecFile}.xml"/>
+    <echo file="${ig.template}ongenerate-validation-jira.json" message='&#x0a;{"severity":"warning","code":"informational","details":{"text":"The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts."}}&#x0a;,'/>
+  </target>   
+  <target name="onGenerate.jira.skip" depends="onGenerate.jira.setup" unless="doJira">
+    <condition property="skip.reason" value="package-list.json file is not yet defined" else="build is running offline">
+      <available file="${file.packagelist}"/>
+    </condition>
+    <echo message="Skipped checking for revised jira spec file because ${skip.reason}"/>
+  </target>
+  <target name="onGenerate.jira" depends="onGenerate.jira.check,onGenerate.jira.skip" extensionOf="onGenerate.extend"/>
+</project>
