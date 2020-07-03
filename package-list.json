@@ -7,7 +7,7 @@
     {
       "version": "current",
       "desc": "Continuous Integration Build (latest in version control)",
-      "path": "https://build.fhir.org/ig/HL7/ig-template-hl7-au",
+      "path": "https://build.fhir.org/ig/HL7au/hl7.au.base.template",
       "status": "ci-build",
       "current": true
     }
