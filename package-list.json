@@ -12,12 +12,28 @@
       "current": true
     },
     {
+      "version": "0.3.0",
+      "desc": "Upgrade for dependency on fhir.base.template",
+      "path": "http://fhir.org/templates/hl7.au.base.template/0.3.0",
+      "status": "release",
+      "sequence": "Publications",
+      "current": true,
+      "date": "2022-09-16"
+    },
+    {
+      "version": "0.2.2",
+      "desc": "Upgrade for dependency on fhir.base.template",
+      "path": "http://fhir.org/templates/hl7.au.base.template/0.2.2",
+      "status": "release",
+      "sequence": "Publications",
+      "date": "2021-09-03"
+    },
+    {
       "version": "0.2.1",
       "desc": "Upgrade for dependency on fhir.base.template",
       "path": "http://fhir.org/templates/hl7.au.base.template/0.2.1",
       "status": "release",
       "sequence": "Publications",
-      "current": true,
       "date": "2020-09-29"
     },
     {
