@@ -2,7 +2,7 @@
   "package-id" : "hl7.au.base.template",
   "title" : "Base template for HL7 Australia IGs",
   "canonical" : "http://fhir.org/templates/hl7.au.base.template",
-  "introduction" : "This is the basic template for HL7 guides",
+  "introduction" : "This is the base template for implementation guides published by HL7 Australia",
   "list" : [
     {
       "version" : "current",
