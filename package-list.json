@@ -12,6 +12,15 @@
       "current" : true
     },
     {
+      "version" : "0.9.0",
+      "path" : "http://fhir.org/templates/hl7.au.base.template/0.9.0",
+      "status" : "release",
+      "sequence" : "Publications",
+      "fhirversion" : "4.0.1",
+      "desc" : "Update extensions layout",
+      "current" : true
+    },
+    {
       "version" : "0.8.1",
       "path" : "http://fhir.org/templates/hl7.au.base.template/0.8.1",
       "status" : "release",
