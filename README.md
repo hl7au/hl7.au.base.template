@@ -4,4 +4,3 @@ Base template for implementation guides published by [HL7 Australia](https://con
 ## Package ID
 package id = `hl7.au.base.template`
 
-
