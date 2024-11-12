@@ -18,7 +18,8 @@
       "sequence" : "Publications",
       "fhirversion" : "4.0.1",
       "desc" : "Update extensions layout",
-      "current" : true
+      "current" : true,
+      "date" : "2024-11-12"
     },
     {
       "version" : "0.8.1",
@@ -27,8 +28,7 @@
       "sequence" : "Publications",
       "fhirversion" : "4.0.1",
       "desc" : "Upgrade for dependency on fhir.base.template",
-      "date" : "2024-07-06",
-      "current" : true
+      "date" : "2024-07-06"
     },
     {
       "version" : "0.8.0",
