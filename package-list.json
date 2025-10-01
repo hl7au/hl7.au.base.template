@@ -12,13 +12,22 @@
       "current" : true
     },
     {
+      "version" : "1.0.0",
+      "path" : "http://fhir.org/templates/hl7.au.base.template/1.0.0",
+      "status" : "release",
+      "sequence" : "Publications",
+      "fhirversion" : "4.0.1",
+      "desc" : "Upgrade for dependency on fhir.base.template",
+      "date" : "2025-10-01",
+      "current" : true
+    },
+    {
       "version" : "0.10.0",
       "path" : "http://fhir.org/templates/hl7.au.base.template/0.10.0",
       "status" : "release",
       "sequence" : "Publications",
       "fhirversion" : "4.0.1",
       "desc" : "Update the header HL7 AU logo link to point to the correct HL7 Australia website URL",
-      "current" : true,
       "date" : "2024-12-08"
     },
     {
