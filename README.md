@@ -7,4 +7,3 @@ For specific HL7 Australia FHIR implementation guide publishing it is recommende
 
 ## Package ID
 package id = `hl7.au.base.template`
-
